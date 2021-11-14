@@ -48,14 +48,16 @@ Write the code in while loop to give this output (Descending Stars, Seven Lines)
 
 Write the code in while loop to give this output (Rising Stars, Five Lines)
 
+version (1)
+
     #include <iostream>
     using namespace std;
     int main()
     {
         int i = 0, j = 0, n = 5;
-        while (i < n) 
+        while (i < n)
         {
-            while (j <= i) 
+            while (j <= i)
             {
                 cout << "*";
                 j++;
@@ -65,8 +67,8 @@ Write the code in while loop to give this output (Rising Stars, Five Lines)
             cout << endl;
         }
     }
-
--------------------------------------- 
+    
+version (2)
 
     #include<iostream>
     using namespace std;
@@ -84,7 +86,7 @@ Write the code in while loop to give this output (Rising Stars, Five Lines)
       }
     }
   
--------------------------------------- 
+version (3)
 
     #include<iostream>
     using namespace std;
