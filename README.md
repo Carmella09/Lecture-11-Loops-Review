@@ -143,19 +143,126 @@ Write the code in while loop to give this output (Rising and Falling Stars)
     
 Factorial
 
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout << "Enter a number: " << endl;
+        double n, factorial = 1;
+        cin >> n;
+        for (int i = n; i > 0; i--)
+        {
+            factorial = i * factorial;
+        }
+        cout << "The factorial of " << n << " is: " << factorial << endl;
+    }
 
 
-Exercise : For Loop
+Exercise : For Loop - Table
+
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int n, p;
+        cout << "Enter a number: ";
+        cin >> n;
+        while (cin.fail())
+        {
+            cout << "Invalid Input" << endl;
+            cout << "Enter the number again: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> n;
+        }
+        for (int i = 0; i <= 10; i++)
+        {
+            p = n * i;
+            cout << n << " i " << i << " = " << p << endl;
+        }
+    }
 
 
+Exercise : Convert the previous code into while loop - Table
 
-Exercise : Convert the previous code into while loop
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int n, p, i = 0;
+        cout << "Enter a number for multiplication tabele: ";
+        cin >> n;
+
+        while (cin.fail())
+        {
+            cout << "Invalid Input" << endl;
+            cout << "Enter the number again: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> n;
+        }
+        while (i <= 10)
+        {
+            p = n * i;
+            cout << n << " i " << i << " = " << p << endl;
+            i++;
+        }
+    }
 
 
+Exercise : For Loop - Table
 
-Exercise : For Loop
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int n, n2, p;
+        cout << "Enter a number for multiplication table: ";
+        cin >> n;
 
+        while (cin.fail())
+        {
+            cout << "Invalid Input" << endl;
+            cout << "Enter the number again: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> n;
+        }
+        cout << "Enetr the number in which it ends (up to 10 only): ";
+        cin >> n2;
 
-Exercise : Do-While Loop
+        while (cin.fail())
+        {
+            cout << "Invalid Input" << endl;
+            cout << "Enter the number again: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> n2;
+        }
 
-Find the 9s
+        for (int i = 0; i <= 10; i++)
+        {
+            p = n * i;
+            cout << n << " x " << i << " = " << p << endl;
+        }
+    }
+
+Exercise : Do-While Loop - Find the 9s
+
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        int n = 100, s = 0;
+        do
+        {
+            if (n % 9 == 0)
+            {
+                cout << "Number: " << n << endl;
+                s = s + n;
+            }
+            n++;
+        } while (n <= 200);
+        cout << "\nSum: " << s << endl;
+    }
+
